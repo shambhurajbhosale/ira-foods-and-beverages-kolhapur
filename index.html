@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>IRA Foods & Beverages</title>
+  <style>
+    body { margin:0; font-family: Arial, sans-serif; background:#fffdf5; color:#222; }
+    header { background:#fceecf; padding:1rem 2rem; text-align:center; box-shadow:0 2px 5px rgba(0,0,0,0.05); }
+    header img { max-width:120px; }
+    nav { margin-top:0.5rem; }
+    nav a { margin:0 1rem; text-decoration:none; font-weight:bold; color:#774400; }
+    .banner { background:#f9d67a; padding:2rem; text-align:center; font-size:1.5rem; font-weight:bold; }
+    section { padding:2rem; max-width:1000px; margin:auto; }
+    .product-grid { display:grid; grid-template-columns:repeat(auto-fit,minmax(280px,1fr)); gap:1.5rem; }
+    .card { background:#fff; border:1px solid #ddd; border-radius:8px; overflow:hidden; cursor:pointer; }
+    .card img { width:100%; height:180px; object-fit:cover; }
+    .card h3 { margin:0.5rem; color:#774400; }
+    .card p { margin:0.5rem; font-size:0.9rem; }
+    .modal { display:none; position:fixed; z-index:1000; left:0; top:0; width:100%; height:100%; background:rgba(0,0,0,0.6); }
+    .modal-content { background:#fff; margin:5% auto; padding:1rem; max-width:600px; border-radius:8px; position:relative; }
+    .modal-content h2 { margin-top:0; }
+    .close { position:absolute; top:10px; right:15px; font-size:24px; cursor:pointer; }
+    .cert-list p { margin:0.5rem 0; }
+    .reviews { display:flex; gap:1rem; overflow-x:auto; }
+    .reviews img { width:200px; height:120px; object-fit:cover; border-radius:6px; }
+    footer { background:#fceecf; padding:1rem; text-align:center; font-size:0.9rem; }
+    .whatsapp { position:fixed; bottom:20px; right:20px; background:#25d366; color:#fff; width:60px; height:60px; border-radius:50%; text-align:center; font-size:30px; line-height:60px; text-decoration:none; }
+  </style>
+</head>
+<body>
+
+<header>
+  <img src="images/logo.png" alt="IRA Logo" />
+  <nav>
+    <a href="#about">About</a>
+    <a href="#products">Products</a>
+    <a href="#certifications">Certifications</a>
+    <a href="#reviews">Reviews</a>
+    <a href="#contact">Contact</a>
+  </nav>
+</header>
+
+<div class="banner">Let’s Garnish Your Taste with Authentic Organic Goodness!</div>
+
+<section id="about">
+  <h2>About Us</h2>
+  <p>IRA Foods & Beverages is a Kolhapur-based enterprise dedicated to producing high-quality, authentic organic products including jaggery, spices, and turmeric. With a focus on purity, sustainability, and health, we empower farmers and bring India's rich food heritage to the world.</p>
+</section>
+
+<section id="products">
+  <h2>Our Products</h2>
+  <div class="product-grid">
+    <div class="card" onclick="openModal('cfj')">
+      <img src="images/chemical-free-jaggery.jpg" alt="Chemical-Free Jaggery" />
+      <h3>Chemical-Free Jaggery</h3>
+      <p>100% natural sugarcane, handmade in iron kadhai.</p>
+    </div>
+    <div class="card" onclick="openModal('oj')">
+      <img src="images/organic-jaggery.jpg" alt="Organic Jaggery" />
+      <h3>Organic Jaggery</h3>
+      <p>Pure sugarcane, stainless steel processing.</p>
+    </div>
+    <div class="card" onclick="openModal('jp')">
+      <img src="images/jaggery-powder.jpg" alt="Jaggery Powder" />
+      <h3>Jaggery Powder</h3>
+      <p>Fine, free-flowing, German machinery processed.</p>
+    </div>
+    <div class="card" onclick="openModal('jc')">
+      <img src="images/jaggery-cubes.jpg" alt="Jaggery Cubes" />
+      <h3>Jaggery Cubes</h3>
+      <p>Travel-friendly cubes, no preservatives.</p>
+    </div>
+    <div class="card" onclick="openModal('km')">
+      <img src="images/kolhapuri-masala.jpg" alt="Kolhapuri Masala" />
+      <h3>Kolhapuri Masala</h3>
+      <p>Premium 32-spice blend for authentic flavor.</p>
+    </div>
+    <div class="card" onclick="openModal('pt')">
+      <img src="images/pure-turmeric.jpg" alt="Pure Turmeric" />
+      <h3>Pure Turmeric</h3>
+      <p>High-curcumin, Salem & Rajapuri roots.</p>
+    </div>
+  </div>
+</section>
+
+<!-- Modals -->
+<div id="cfj" class="modal"><div class="modal-content"><span class="close" onclick="closeModal('cfj')">&times;</span><h2>Chemical-Free Jaggery</h2><p>Made with 100% natural sugarcane juice, processed in cast iron kadhai. No chemicals, preservatives, or artificial colors. Hygienic and rich in nutrients, perfect for all ages.</p></div></div>
+<div id="oj" class="modal"><div class="modal-content"><span class="close" onclick="closeModal('oj')">&times;</span><h2>Organic Jaggery</h2><p>Made in stainless steel automated units from pure sugarcane. No chemical additives. High nutritional value, natural sweetness, ideal for a healthy lifestyle.</p></div></div>
+<div id="jp" class="modal"><div class="modal-content"><span class="close" onclick="closeModal('jp')">&times;</span><h2>Jaggery Powder</h2><p>Produced using German machinery for the finest consistency. Free-flowing, 100% natural, retains all health benefits of jaggery.</p></div></div>
+<div id="jc" class="modal"><div class="modal-content"><span class="close" onclick="closeModal('jc')">&times;</span><h2>Jaggery Cubes</h2><p>Crunchy, preservative-free cubes made from pure sugarcane. Perfect in tea or as a natural sweetener on the go.</p></div></div>
+<div id="km" class="modal"><div class="modal-content"><span class="close" onclick="closeModal('km')">&times;</span><h2>Kolhapuri Masala</h2><p>Aromatic blend of 32 premium spices including Kashmiri, Sankeshwari, Byadgi chilies, and more. Brings authentic Kolhapuri taste to your dishes.</p></div></div>
+<div id="pt" class="modal"><div class="modal-content"><span class="close" onclick="closeModal('pt')">&times;</span><h2>Pure Turmeric Powder</h2><p>Made from Salem & Rajapuri turmeric roots, high curcumin content. Naturally processed, preservative-free, ideal for cooking and wellness.</p></div></div>
+
+<section id="certifications">
+  <h2>Certifications & Licenses</h2>
+  <div class="cert-list">
+    <p>✅ FSSAI No: 21522043000128</p>
+    <p>✅ IEC Code: AAWFI5910E</p>
+    <p>✅ MSME Registered</p>
+  </div>
+</section>
+
+<section id="reviews">
+  <h2>Customer Reviews</h2>
+  <div class="reviews">
+    <img src="images/review1.jpg" alt="Review 1" />
+    <img src="images/review2.jpg" alt="Review 2" />
+    <img src="images/review3.jpg" alt="Review 3" />
+  </div>
+</section>
+
+<section id="contact">
+  <h2>Contact Us</h2>
+  <p>📞 +91 93071 25590</p>
+  <p>📧 iraindiafoods@gmail.com</p>
+  <p>📍 Plot No. 07, Jagtap Nagar, Pachgaon Road, Kolhapur - 416007</p>
+  <p>🏭 Plot No. 131, Gokul Shirgaon MIDC, Kolhapur</p>
+</section>
+
+<a class="whatsapp" href="https://wa.me/919307125590" target="_blank">💬</a>
+
+<footer>
+  <p>&copy; 2025 IRA Foods & Beverages. All rights reserved.</p>
+</footer>
+
+<script>
+  function openModal(id) { document.getElementById(id).style.display = 'block'; }
+  function closeModal(id) { document.getElementById(id).style.display = 'none'; }
+  window.onclick = function(e) {
+    ['cfj','oj','jp','jc','km','pt'].forEach(id => {
+      var m = document.getElementById(id);
+      if (e.target==m) m.style.display='none';
+    });
+  };
+</script>
+
+</body>
+</html>
